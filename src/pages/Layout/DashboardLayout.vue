@@ -4,22 +4,22 @@
 
     <side-bar>
       <mobile-menu slot="content"></mobile-menu>
+
       <sidebar-link to="/dashboard">
         <md-icon>dashboard</md-icon>
         <p>仪表盘</p>
       </sidebar-link>
-      <sidebar-link to="/user">
-        <md-icon>person</md-icon>
-        <p>用户中心</p>
-      </sidebar-link>
+
       <sidebar-link to="/binary-conversion">
-        <md-icon>content_paste</md-icon>
+        <md-icon>swap_horiz</md-icon>
         <p>进制转换</p>
       </sidebar-link>
+
       <sidebar-link to="/ascii-table">
-        <md-icon>content_paste</md-icon>
+        <md-icon>code</md-icon>
         <p>ASCII码表</p>
       </sidebar-link>
+
     </side-bar>
 
     <div class="main-panel">
