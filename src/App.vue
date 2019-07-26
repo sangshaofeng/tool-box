@@ -1,7 +1,17 @@
 <template>
-  <router-view></router-view>
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <script>
-export default {};
+
+export default {
+  name: 'app',
+  components: {}
+}
 </script>
+
+<style lang="less">
+
+</style>
