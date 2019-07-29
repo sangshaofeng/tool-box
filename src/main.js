@@ -3,14 +3,28 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import service from './request'
-import Antd from 'ant-design-vue'
-
-import 'ant-design-vue/dist/antd.css'
 import './styles/index.less'
+
+import {
+  Menu,
+  Icon,
+  Layout,
+  Table,
+  Input,
+  Button,
+  Dropdown
+} from 'ant-design-vue'
+
+Vue.use(Menu)
+Vue.use(Icon)
+Vue.use(Layout)
+Vue.use(Table)
+Vue.use(Input)
+Vue.use(Button)
+Vue.use(Dropdown)
 
 Vue.config.productionTip = false
 
-Vue.use(Antd)
 Vue.prototype.$axios = service
 
 new Vue({
