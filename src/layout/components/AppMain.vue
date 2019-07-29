@@ -25,10 +25,7 @@ export default {
 
 <style lang="less" scoped>
 .ant-layout-content {
-  // background: transparent !important;
-  background: #fff;
   margin: 20px;
-  padding: 20px;
   min-height: 280px;
 }
 

@@ -1,14 +1,13 @@
 <template>
-  <a-layout 
-    class="layout-container" 
-    :class="{ 'sidebar-collapsed': sidebarCollapsed }" 
+  <a-layout
+    class="layout-container"
+    :class="{ 'sidebar-collapsed': sidebarCollapsed }"
     style="min-height: 100vh">
     <sidebar></sidebar>
     <a-layout class="right-body"
       :class="bindClass">
       <navbar :class="{'fixed-header': fixedHeader, 'show-route-tags-viewer': showRouteTagsViewer }"></navbar>
       <app-main class="app-main-container"></app-main>
-      <footer-bar></footer-bar>
     </a-layout>
   </a-layout>
 </template>

@@ -10,11 +10,11 @@
     <div class="sidebar-logo-container">
       <transition name="sidebarLogoFade">
         <router-link v-if="sidebarCollapsed" key="collapse" class="sidebar-logo-link" to="/">
-          <img v-if="logo" :src="logo" class="sidebar-logo">
+          <a-icon v-if="logo" type="github" class="sidebar-logo" />
           <h1 v-else class="sidebar-title">{{ title }} </h1>
         </router-link>
         <router-link v-else key="expand" class="sidebar-logo-link" to="/">
-          <img v-if="logo" :src="logo" class="sidebar-logo">
+          <a-icon v-if="logo" type="github" class="sidebar-logo" />
           <h1 class="sidebar-title">{{ title }} </h1>
         </router-link>
       </transition>
@@ -61,7 +61,7 @@ export default {
       collapsed: false,
       theme: 'dark',
       config: appConfig,
-      title: '管理系统',
+      title: 'Tool Box',
       logo: 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
     }
   },
@@ -136,6 +136,8 @@ export default {
       width: 100%;
       .sidebar-logo {
         width: 25px;
+        font-size: 20px;
+        // color: #fff;
         vertical-align: middle;
       }
       .sidebar-title {

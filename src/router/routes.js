@@ -1,5 +1,4 @@
 import Layout from '@/layout'
-import manualRoutes from './modules/manual'
 
 const constantRouterMap = [
   {
@@ -15,15 +14,60 @@ const constantRouterMap = [
     children: [
       {
         path: 'dashboard',
-        component: () => import('@/pages/dashboard/index'),
+        component: () => import('@/pages/Dashboard/index'),
         name: "Dashboard",
         meta: {
           keepAlive: true,
           affix: true,
           title: "Dashboard",
-          roles: ["dashboard"],
         }
-      }
+      },
+    ]
+  },
+  // 进制转换页面
+  {
+    path: '/radix',
+    component: Layout,
+    redirect: '/radix/index',
+    name: "Radix",
+    meta: {
+      title: "进制转换",
+      icon: 'retweet',
+      hidden: false
+    },
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/pages/Radix'),
+        name: "Radix",
+        meta: {
+          keepAlive: true,
+          title: "进制转换",
+        }
+      },
+    ]
+  },
+  // ascii查询表
+  {
+    path: '/ascii',
+    component: Layout,
+    redirect: '/ascii/index',
+    name: "ASCII",
+    meta: {
+      title: "ASCII编码查询",
+      icon: 'code',
+      hidden: false
+    },
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/pages/ASCIITable'),
+        name: "ASCII",
+        meta: {
+          keepAlive: true,
+          title: "ASCII编码查询",
+        }
+      },
     ]
   },
   {
@@ -44,8 +88,6 @@ const constantRouterMap = [
       hidden: true
     }
   },
-  // 路由模块
-  manualRoutes,
   {
     path: '*',
     name: "all",

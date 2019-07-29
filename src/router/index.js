@@ -13,7 +13,7 @@ NProgress.configure({ showSpinner: false })
 
 const router = new Router({
   mode: 'history',
-  base: '/',
+  base: '/tool-box',
   scrollBehavior: () => ({ y: 0 }),
   routes: routes
 })
