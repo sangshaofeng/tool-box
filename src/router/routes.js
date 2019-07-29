@@ -70,6 +70,29 @@ const constantRouterMap = [
       },
     ]
   },
+  // 时间工具
+  {
+    path: '/time-utils',
+    component: Layout,
+    redirect: '/time-utils/index',
+    name: "TimeUtils",
+    meta: {
+      title: "时间戳工具",
+      icon: 'dashboard',
+      hidden: false
+    },
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/pages/TimeUtils'),
+        name: "TimeUtils",
+        meta: {
+          keepAlive: false,
+          title: "时间戳工具",
+        }
+      },
+    ]
+  },
   {
     path: '/login',
     name: 'Login',
