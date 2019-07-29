@@ -17,12 +17,11 @@ import { mapState } from 'vuex'
 import AppMain from './components/AppMain'
 import Sidebar from './components/Sidebar'
 import Navbar from './components/HeaderNav'
-import FooterBar from './components/Footer'
 import appConfig from '@/app.config'
 
 export default {
   components: {
-    AppMain, Sidebar, Navbar, FooterBar
+    AppMain, Sidebar, Navbar
   },
   data () {
     return {

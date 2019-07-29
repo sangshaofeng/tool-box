@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-
+    首页
   </div>
 </template>
 
@@ -9,7 +9,7 @@ export default {
 
 }
 </script>
-
+  
 <style lang="less" scoped>
 .wrapper {
   width: 100%;
