@@ -64,7 +64,7 @@ const constantRouterMap = [
         component: () => import('@/pages/ASCIITable'),
         name: "ASCII",
         meta: {
-          keepAlive: true,
+          keepAlive: false,
           title: "ASCII编码查询",
         }
       },
