@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <a-table :columns="columns" :dataSource="data" bordered :pagination="true">
+    <a-table :columns="columns" :dataSource="data" bordered :pagination="{ pageSize: 12}">
       <div slot="filterDropdown" slot-scope="{ setSelectedKeys, selectedKeys, confirm, clearFilters, column }" class='custom-filter-dropdown'>
         <a-input
           v-ant-ref="c => searchInput = c"

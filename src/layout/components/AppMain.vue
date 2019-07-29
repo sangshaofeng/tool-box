@@ -1,10 +1,8 @@
 <template>
   <a-layout-content class="content-container">
-    <transition name="fade-transform" mode="out-in">
-      <keep-alive :include="cachedViews">
-        <router-view v-if="$route.meta.keepAlive" :key="key"/>
-      </keep-alive>
-    </transition>
+    <keep-alive :include="cachedViews">
+      <router-view v-if="$route.meta.keepAlive" :key="key"/>
+    </keep-alive>
     <router-view v-if="!$route.meta.keepAlive" />
   </a-layout-content>
 </template>
@@ -30,16 +28,16 @@ export default {
 }
 
 /* fade-transform */
-.fade-transform-leave-active,
-.fade-transform-enter-active {
-  transition: all .5s;
-}
-.fade-transform-enter {
-  opacity: 0;
-  transform: translateX(-30px);
-}
-.fade-transform-leave-to {
-  opacity: 0;
-  transform: translateX(30px);
-}
+// .fade-transform-leave-active,
+// .fade-transform-enter-active {
+//   transition: all .5s;
+// }
+// .fade-transform-enter {
+//   opacity: 0;
+//   transform: translateX(-30px);
+// }
+// .fade-transform-leave-to {
+//   opacity: 0;
+//   transform: translateX(30px);
+// }
 </style>
