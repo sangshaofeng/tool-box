@@ -12,7 +12,9 @@ import {
   Table,
   Input,
   Button,
-  Dropdown
+  Dropdown,
+  Card,
+  Select,
 } from 'ant-design-vue'
 
 Vue.use(Menu)
@@ -22,6 +24,8 @@ Vue.use(Table)
 Vue.use(Input)
 Vue.use(Button)
 Vue.use(Dropdown)
+Vue.use(Card)
+Vue.use(Select)
 
 Vue.config.productionTip = false
 
