@@ -72,8 +72,9 @@ export default {
         this.outputValue = ''
         return
       }
-      this.validate()
-      this.outputValue = this.radixConvert(this.inputValue, this.radixInput, this.radixOutput)
+      this.validate().then(value => {
+        this.outputValue = this.radixConvert(value, this.radixInput, this.radixOutput)
+      })
     },
 
     radixInputChange() {
@@ -94,25 +95,28 @@ export default {
     },
 
     validate() {
-      let isIllegal = false
-      let s = this.inputValue
-      s = s.split('')
-      s.forEach((k, i) => {
-        if (this.radixInput == 16) {
-          if (!/^[0-9a-fA-F]/.test(k)) {
-            isIllegal = true
-            this.inputValue = s.slice(0, i).join('')
-            return
+      return new Promise(resolve => {
+        let isIllegal = false
+        let s = this.inputValue
+        s = s.split('')
+        console.log(s)
+        s.forEach((k, i) => {
+          if (this.radixInput == 16) {
+            if (!/^[0-9a-fA-F]/.test(k)) {
+              isIllegal = true
+              this.inputValue = s.slice(0, i).join('')
+              return
+            }
+          } else {
+            if (Number(k) >= this.radixInput || k === 'e') {
+              isIllegal = true
+              this.inputValue = s.slice(0, i).join('')
+              return
+            }
           }
-        } else {
-          if (Number(k) >= this.radixInput) {
-            isIllegal = true
-            this.inputValue = s.slice(0, i).join('')
-            return
-          }
-        }
+        })
+        resolve(this.inputValue)
       })
-      return isIllegal
     },
 
     radixConvert(num, radixInput, radixOutput) {
