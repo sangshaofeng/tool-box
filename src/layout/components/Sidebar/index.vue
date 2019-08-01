@@ -25,7 +25,7 @@
       :selectedKeys="[selectedKeys]"
       @click="toggleMenuActive"
     >
-      <template v-for="route in permissionRoutes">
+      <template v-for="route in routes">
         <a-menu-item
           v-if="hasOneChild(route) && !route.meta.hidden"
           :key="route.name"
@@ -49,6 +49,7 @@ import path from 'path'
 import { mapState } from 'vuex'
 import appConfig from '@/app.config'
 import SidebarItem from './SidebarItem'
+import Routes from '@/router/routes'
 
 export default {
   components: {
@@ -56,6 +57,7 @@ export default {
   },
   data() {
     return {
+      routes: Routes,
       openKeys: '',
       selectedKeys: '/dashboard',
       collapsed: false,
@@ -76,7 +78,6 @@ export default {
   computed: {
     ...mapState({
       sidebarCollapsed: state => state.app.sidebarCollapsed,
-      permissionRoutes: state => state.routePermission.routes
     }),
     bindClass() {
       return {
