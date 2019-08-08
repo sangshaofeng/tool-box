@@ -61,7 +61,7 @@ export default {
       openKeys: '',
       selectedKeys: '/dashboard',
       collapsed: false,
-      theme: 'dark',
+      theme: 'light',
       config: appConfig,
       title: 'Tool Box',
       logo: 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
@@ -125,6 +125,8 @@ export default {
 .sidebar-wrapper {
   height: 100%;
   text-align: left;
+  box-shadow: 2px 0 6px rgba(0,21,41,.05);
+  background: #fff;
   .sidebar-logo-container {
     width: 100%;
     height: 50px;
@@ -135,16 +137,16 @@ export default {
       display: inline-block;
       height: 100%;
       width: 100%;
+      border: 1px solid #eee;
       .sidebar-logo {
         width: 25px;
         font-size: 20px;
-        // color: #fff;
         vertical-align: middle;
       }
       .sidebar-title {
         display: inline-block;
         margin: 0 0 0 12px;
-        color: #fff;
+        color: #a0a0a0;
         font-weight: 600;
         line-height: 50px;
         font-size: 14px;
