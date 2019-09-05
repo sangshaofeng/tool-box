@@ -1,15 +1,16 @@
 <template>
   <div class="wrapper">
-    <a-card>
+    <a-card title="图片压缩工具">
       <a-upload
         name="avatar"
         listType="picture-card"
         class="avatar-uploader"
+        :fileList="fileList"
+        @change="handleFileChange"
       >
-        <img v-if="imageUrl" :src="imageUrl" alt="avatar" />
-        <div v-else>
-            <a-icon :type="loading ? 'loading' : 'plus'" />
-            <div class="ant-upload-text">Upload</div>
+        <div v-if="fileList.length < 1">
+          <a-icon type="plus" />
+          <div class="ant-upload-text">上传图片</div>
         </div>
       </a-upload>
     </a-card>
@@ -17,8 +18,19 @@
 </template>
 
 <script>
-export default {
+import { ImageCompress } from '@/utils'
 
+export default {
+  data() {
+    return {
+      fileList: []
+    }
+  },
+  methods: {
+    handleFileChange({ fileList }) {
+      this.fileList = fileList
+    }
+  }
 }
 </script>
 
