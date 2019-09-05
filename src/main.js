@@ -15,6 +15,7 @@ import {
   Dropdown,
   Card,
   Select,
+  Upload,
 } from 'ant-design-vue'
 
 Vue.use(Menu)
@@ -26,6 +27,7 @@ Vue.use(Button)
 Vue.use(Dropdown)
 Vue.use(Card)
 Vue.use(Select)
+Vue.use(Upload)
 
 Vue.config.productionTip = false
 

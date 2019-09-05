@@ -7,7 +7,7 @@
     collapsible
     v-model="sidebarCollapsed"
   >
-    <div class="sidebar-logo-container">
+    <div class="sidebar-logo-container" v-if="config.showLogo">
       <transition name="sidebarLogoFade">
         <router-link v-if="sidebarCollapsed" key="collapse" class="sidebar-logo-link" to="/">
           <a-icon v-if="logo" type="github" class="sidebar-logo" />

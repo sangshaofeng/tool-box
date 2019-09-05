@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import ASCII from '@/ASCII.js'
+import ASCII from '@/utils/ASCII.js'
 const columns = [
   { title: '2进制', dataIndex: 'b2', align: 'center' },
   { title: '8进制', dataIndex: 'b8', align: 'center' },

@@ -1,6 +1,8 @@
 <template>
   <div class="wrapper">
-    时间工具
+    <div class="main">
+
+    </div>
   </div>
 </template>
 
@@ -10,6 +12,13 @@ export default {
 }
 </script>
 
-<style lang="css" scoped >
-
+<style lang="less" scoped>
+.wrapper {
+  .main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
 </style>

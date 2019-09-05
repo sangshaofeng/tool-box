@@ -93,6 +93,29 @@ const constantRouterMap = [
       },
     ]
   },
+  // 图片压缩
+  {
+    path: '/image-compress',
+    component: Layout,
+    redirect: '/image-compress/index',
+    name: "ImageCompress",
+    meta: {
+      title: "图片压缩",
+      icon: 'picture',
+      hidden: false
+    },
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/pages/ImageCompress'),
+        name: "ImageCompress",
+        meta: {
+          keepAlive: false,
+          title: "图片压缩",
+        }
+      },
+    ]
+  },
   {
     path: '/login',
     name: 'Login',
